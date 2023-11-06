@@ -22,8 +22,6 @@ public class NetworkEndpointFinderImpl implements NetworkEndpointFinder {
         if (index == -1) {
             return -1;
         }
-        // parcours du map de voisinage (this.correspondance) pour trouver le noeud de fin
-        // correspondant au noeud de départ
         int endNodeId = this.correspondance.get(startNodeId);
         while (endNodeId != startNodeId) {
             startNodeId = endNodeId;
